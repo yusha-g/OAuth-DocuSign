@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>DocuSign Authorize User</title>
+  </head>
+<body>  
+    <div class="header">
+        <span class="heading">DocuSign Envelope</span>
+        <span class="dp">
+            <span class="dev-info">Developer <br> Information</span>
+            <div class="dp-content" align="right">
+                
+                    Pratyush Ghosh <br>
+                    07/05/23
+                
+            </div>
+        </span> 
+    </div>
+    
+    
+    <div class="row center-align" id="center-btn">
+      <a class="waves-effect waves-light btn-large" onclick="getAuth()">
+        <i class="material-icons left">check_circle</i>
+        Authorize User
+      </a>
+    </div>
+    
+    
+    <script>
+      function getAuth() {
+        const clientID = "58cd21de-88c4-4065-9981-ebb3d1df655f";
+        const redirectURI = "http://localhost:8000/start";
+        const scope = "signature%20impersonation";
+        const authUrl = `https://account-d.docusign.com/oauth/auth?response_type=code&scope=${scope}&client_id=${clientID}&redirect_uri=${redirectURI}`;
+        window.location.href = authUrl;
+      }
+    </script>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

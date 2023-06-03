@@ -1,0 +1,23 @@
+{
+  "name": "docusign-intergrated-webapp",
+  "version": "1.0.0",
+  "description": "integrating OAuth with DocuSign to provide user with envelope creating functionalities",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yusha-g",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "docusign-esign": "^5.8.1",
+    "dotenv": "^16.0.3",
+    "envfile": "^6.18.0",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
